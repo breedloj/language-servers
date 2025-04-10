@@ -1,12 +1,20 @@
 import { TriggerType } from '@aws/chat-client-ui-types'
-import { ChatTriggerType, SendMessageCommandInput, UserIntent } from '@amzn/codewhisperer-streaming'
+import {
+    ChatTriggerType,
+    RelevantTextDocument,
+    SendMessageCommandInput,
+    UserIntent,
+} from '@amzn/codewhisperer-streaming'
 import { ChatParams, CursorState, InlineChatParams } from '@aws/language-server-runtimes/server-interface'
 import { Features } from '../../types'
 import { DocumentContext, DocumentContextExtractor } from './documentContext'
+import { LocalProjectContextController } from '../../localProjectContext/localProjectContextController'
+import { convertChunksToRelevantTextDocuments } from '../tools/relevantTextDocuments'
 
 export interface TriggerContext extends Partial<DocumentContext> {
     userIntent?: UserIntent
     triggerType?: TriggerType
+    relevantDocuments?: RelevantTextDocument[]
 }
 
 export class QChatTriggerContext {
@@ -22,10 +30,12 @@ export class QChatTriggerContext {
 
     async getNewTriggerContext(params: ChatParams | InlineChatParams): Promise<TriggerContext> {
         const documentContext: DocumentContext | undefined = await this.extractDocumentContext(params)
+        const relevantDocuments = await this.extractProjectContext(params.prompt.prompt)
 
         return {
             ...documentContext,
             userIntent: this.#guessIntentFromPrompt(params.prompt.prompt),
+            relevantDocuments,
         }
     }
 
@@ -37,7 +47,6 @@ export class QChatTriggerContext {
         profileArn?: string
     ): SendMessageCommandInput {
         const { prompt } = params
-
         const data: SendMessageCommandInput = {
             conversationState: {
                 chatTriggerType: chatTriggerType,
@@ -54,6 +63,7 @@ export class QChatTriggerContext {
                                               programmingLanguage: triggerContext.programmingLanguage,
                                               relativeFilePath: triggerContext.relativeFilePath,
                                           },
+                                          relevantDocuments: triggerContext.relevantDocuments,
                                       },
                                   }
                                 : undefined,
@@ -85,6 +95,18 @@ export class QChatTriggerContext {
                   cursorState?.[0] ?? QChatTriggerContext.DEFAULT_CURSOR_STATE
               )
             : undefined
+    }
+
+    private async extractProjectContext(prompt?: string): Promise<RelevantTextDocument[] | undefined> {
+        if (prompt === undefined) {
+            return undefined
+        }
+
+        const vectorResult = await LocalProjectContextController.getInstance().queryVectorIndex({
+            query: prompt,
+        })
+
+        return convertChunksToRelevantTextDocuments(vectorResult.chunks)
     }
 
     #guessIntentFromPrompt(prompt?: string): UserIntent | undefined {
