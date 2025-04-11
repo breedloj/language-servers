@@ -172,8 +172,7 @@ export class LocalProjectContextController {
         const { signal } = controller
 
         const workspaceSourceFiles = workspaceFolders.reduce((allFiles: string[], folder: WorkspaceFolder) => {
-            const relativePath = path.relative(process.cwd(), folder.uri)
-            const absolutePath = path.resolve(folder.uri)
+            const absolutePath = path.resolve(new URL(folder.uri).pathname)
 
             const crawler = new fdir()
                 .withSymlinks({ resolvePaths: !includeSymLinks })
@@ -198,7 +197,7 @@ export class LocalProjectContextController {
                     )
                 })
 
-            const sourceFiles = crawler.crawl(relativePath).sync()
+            const sourceFiles = crawler.crawl(absolutePath).sync()
 
             return [...allFiles, ...sourceFiles]
         }, [] as string[])
