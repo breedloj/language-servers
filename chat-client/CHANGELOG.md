@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.1.5](https://github.com/breedloj/language-servers/compare/chat-client/v0.1.4...chat-client/v0.1.5) (2025-04-18)
+
+
+### Features
+
+* add context transparency feature ([#903](https://github.com/breedloj/language-servers/issues/903)) ([9432ffb](https://github.com/breedloj/language-servers/commit/9432ffb8586e4f8181c4f14944b0d3d32aff3e78))
+* **chat-client:** added support for redirecting message handling to custom adapter ([#905](https://github.com/breedloj/language-servers/issues/905)) ([b95fe1e](https://github.com/breedloj/language-servers/commit/b95fe1e1a63f6df469bcd0c5e58a66c0819feb55))
+* **chat-client:** history list and conversation actions ([#929](https://github.com/breedloj/language-servers/issues/929)) ([5b8e83c](https://github.com/breedloj/language-servers/commit/5b8e83cacc56d854623a6e2b59f2f920538f5b85))
+* **chat-client:** implement export conversation flow ([#944](https://github.com/breedloj/language-servers/issues/944)) ([63fd2dc](https://github.com/breedloj/language-servers/commit/63fd2dc773e742c47040fd66aac4912664d91dd0))
+* configure history button based on history enabled/disabled ([#957](https://github.com/breedloj/language-servers/issues/957)) ([eded88f](https://github.com/breedloj/language-servers/commit/eded88fae2311c2a73d377a479933f9f66df137d))
+* context data selection support in chat-client ([#902](https://github.com/breedloj/language-servers/issues/902)) ([a22dea5](https://github.com/breedloj/language-servers/commit/a22dea51c0039f198a403e88f774ad7769b15d29))
+* handle fileClick events ([#919](https://github.com/breedloj/language-servers/issues/919)) ([511be2e](https://github.com/breedloj/language-servers/commit/511be2e2e6f527039a99f53cb76fbfc180ef9b55))
+* implement restore tab ([#933](https://github.com/breedloj/language-servers/issues/933)) ([ad2c5d7](https://github.com/breedloj/language-servers/commit/ad2c5d77e497e9f8a2019eb547b164f5c5992160))
+* support create prompt form in chat-client ([#910](https://github.com/breedloj/language-servers/issues/910)) ([a1f0310](https://github.com/breedloj/language-servers/commit/a1f0310eff33700cff9551c7d3c84356e4246856))
+
+
+### Bug Fixes
+
+* **chat-client:** disable click event for empty history list item ([#973](https://github.com/breedloj/language-servers/issues/973)) ([bc20a04](https://github.com/breedloj/language-servers/commit/bc20a04277a7b603e0d0c5e623c87b2a5c4dc4d4))
+* **chat-client:** missing break in getSerializedChat request handling ([#978](https://github.com/breedloj/language-servers/issues/978)) ([5555d09](https://github.com/breedloj/language-servers/commit/5555d09f2c024621ae706e01a8cac70f5582a7d8))
+* pin typescript version and fix compile errors ([#924](https://github.com/breedloj/language-servers/issues/924)) ([7400fa3](https://github.com/breedloj/language-servers/commit/7400fa3d143fb2c22575485eec7aeb75a63b3612))
+* remove duplicate property ([#928](https://github.com/breedloj/language-servers/issues/928)) ([c1aaec0](https://github.com/breedloj/language-servers/commit/c1aaec06b70f4ef9d5e2a7ad0d1cc4d5d6955087))
+* replaced icon for history and added tests ([#951](https://github.com/breedloj/language-servers/issues/951)) ([da3b664](https://github.com/breedloj/language-servers/commit/da3b66414514740f514d96279b826aebc4e86077))
+
 ## [0.1.4](https://github.com/aws/language-servers/compare/chat-client/v0.1.3...chat-client/v0.1.4) (2025-04-08)
 
 
