@@ -1,5 +1,112 @@
 # Changelog
 
+## [0.0.33](https://github.com/breedloj/language-servers/compare/lsp-codewhisperer/v0.0.32...lsp-codewhisperer/v0.0.33) (2025-04-22)
+
+
+### Features
+
+* add [@workspace](https://github.com/workspace) context in agentic chat ([#1029](https://github.com/breedloj/language-servers/issues/1029)) ([f2916f4](https://github.com/breedloj/language-servers/commit/f2916f45c351a42a9951ff00bcb7f7eed3ce7274))
+* add configurable file indexing logic ([#967](https://github.com/breedloj/language-servers/issues/967)) ([dd49420](https://github.com/breedloj/language-servers/commit/dd49420beeae58d6a425b192dffd3f59f6b1bb7b))
+* add enablerazorviewtransform ([527ae03](https://github.com/breedloj/language-servers/commit/527ae03521642e9b6940f3ba71ca61327d8d28b8))
+* add explanation text as directive ([#1054](https://github.com/breedloj/language-servers/issues/1054)) ([a0ca8e0](https://github.com/breedloj/language-servers/commit/a0ca8e0059a26ac7f21e04940ad120c3de268df9))
+* add IAM Q Streaming Client to language-servers ([#927](https://github.com/breedloj/language-servers/issues/927)) ([ef89fdf](https://github.com/breedloj/language-servers/commit/ef89fdf228f4799a29a22a60dc105ade4ee99ab3))
+* add iam support in q chat server and q agentic server ([#945](https://github.com/breedloj/language-servers/issues/945)) ([2ac19b7](https://github.com/breedloj/language-servers/commit/2ac19b76731cb07bd7a5621c049b9c9ff18a8d45))
+* add LSP based tools for listing files, file contents, and updating files ([33fbf03](https://github.com/breedloj/language-servers/commit/33fbf03c9065deaf86ccf9f859b731fc8d3f6026))
+* add proper windows support for executeBash and remove mocks in tests. ([#934](https://github.com/breedloj/language-servers/issues/934)) ([148062f](https://github.com/breedloj/language-servers/commit/148062f51d9ef54fdce7be5658bb878b6a9fccc7))
+* Add support for inline chat ([#897](https://github.com/breedloj/language-servers/issues/897)) ([9fd97ea](https://github.com/breedloj/language-servers/commit/9fd97ea946712dbbd4490752d41c395d508c8d0c))
+* add text based tool updates for agentic-chat ([#984](https://github.com/breedloj/language-servers/issues/984)) ([12dc8d7](https://github.com/breedloj/language-servers/commit/12dc8d767be42d04d50303143e1a551fb103bdc5))
+* add tools to request in agentic chat controller and log tool usages ([39e9472](https://github.com/breedloj/language-servers/commit/39e947286e64d80677d231b87cf62acab16e756b))
+* added icons to help and clear action ([#942](https://github.com/breedloj/language-servers/issues/942)) ([694bbb8](https://github.com/breedloj/language-servers/commit/694bbb85580cc79313d65ad77b224875f74280c2))
+* added support for injecting additional context commands ([#1045](https://github.com/breedloj/language-servers/issues/1045)) ([d755da3](https://github.com/breedloj/language-servers/commit/d755da36bd7bf76684aceafb6a2cbc2f8f76291e))
+* allow generateAssistantResponse throughout chatSession and triggerContext ([091f99f](https://github.com/breedloj/language-servers/commit/091f99f6535de981efecc7b07337e027432a35e2))
+* **amazonq:** add pair programming toggle ([#1013](https://github.com/breedloj/language-servers/issues/1013)) ([7266d32](https://github.com/breedloj/language-servers/commit/7266d32b2fb73ead40abecb22749a2c9e5206a2a))
+* **amazonq:** add streaming client caching and inflight-request cancellation ([#901](https://github.com/breedloj/language-servers/issues/901)) ([ecb323d](https://github.com/breedloj/language-servers/commit/ecb323dbd3835193c1f8478d797b6a37d89b5961))
+* **amazonq:** centralize configuration handling to base service manager class ([#906](https://github.com/breedloj/language-servers/issues/906)) ([b3aa8fa](https://github.com/breedloj/language-servers/commit/b3aa8fa54c7b13144fd8a924b1ad6e4f4a25fca4))
+* **amazonq:** chat history and conversation persistence ([#941](https://github.com/breedloj/language-servers/issues/941)) ([bf944e0](https://github.com/breedloj/language-servers/commit/bf944e08e6044eb286a16ba451e70dbc5d88837a))
+* **amazonq:** initial implementation of read/list chat result ([#1024](https://github.com/breedloj/language-servers/issues/1024)) ([890e45e](https://github.com/breedloj/language-servers/commit/890e45eae48930370089936880c77b10edb83059))
+* **amazonq:** initial UI for execute bash chat message ([#1041](https://github.com/breedloj/language-servers/issues/1041)) ([b3ed518](https://github.com/breedloj/language-servers/commit/b3ed518f27251742c392138f05b02281dfcddcac))
+* **amazonq:** integrate with local context server ([71f4a44](https://github.com/breedloj/language-servers/commit/71f4a4465ab80264563f83f99fdc3ab0f0241d0b))
+* **amazonq:** optimize service manager reuse ([#886](https://github.com/breedloj/language-servers/issues/886)) ([84f46ef](https://github.com/breedloj/language-servers/commit/84f46ef88fbae72a246c3e966ee525124eb8915a))
+* **amazonq:** support context commands in agentic chat ([#948](https://github.com/breedloj/language-servers/issues/948)) ([71f4a44](https://github.com/breedloj/language-servers/commit/71f4a4465ab80264563f83f99fdc3ab0f0241d0b))
+* **chat-client:** implement export conversation flow ([#944](https://github.com/breedloj/language-servers/issues/944)) ([63fd2dc](https://github.com/breedloj/language-servers/commit/63fd2dc773e742c47040fd66aac4912664d91dd0))
+* context data selection support in chat-client ([#902](https://github.com/breedloj/language-servers/issues/902)) ([a22dea5](https://github.com/breedloj/language-servers/commit/a22dea51c0039f198a403e88f774ad7769b15d29))
+* copied test files and added README to clarify purpose of this folder ([6a18e55](https://github.com/breedloj/language-servers/commit/6a18e55a1392aa9e68a202a8ca6f1a8b5c55bb4b))
+* create copy of chat server and controller to use in agentic chat ([035b30e](https://github.com/breedloj/language-servers/commit/035b30ec98b85faad5696034e56dbafef67e7f79))
+* enable different variants in tool usage, inputs, and results ([0707d86](https://github.com/breedloj/language-servers/commit/0707d866893052ebcf15d9b205304852f19a555b))
+* enable inline project context in suggestion requests ([#983](https://github.com/breedloj/language-servers/issues/983)) ([501d3fe](https://github.com/breedloj/language-servers/commit/501d3fe01b44aa04bebd41e3ce0ad8a921756c11))
+* enable inline project context in suggestion requests ([#993](https://github.com/breedloj/language-servers/issues/993)) ([b6d0e25](https://github.com/breedloj/language-servers/commit/b6d0e250f021f776e3b4d609823f072f302a476d))
+* expose configuration for GPU acceleration and index worker threads in context server ([#960](https://github.com/breedloj/language-servers/issues/960)) ([0ecb9dd](https://github.com/breedloj/language-servers/commit/0ecb9dd6782b1b22e8031613d99c87a05dd2a6ab))
+* fsWrite undo button ([#1053](https://github.com/breedloj/language-servers/issues/1053)) ([e5d2f6a](https://github.com/breedloj/language-servers/commit/e5d2f6a952d8ed0ad01223e05446cb87d4c6d406))
+* improve symlink handling ([#998](https://github.com/breedloj/language-servers/issues/998)) ([db917b3](https://github.com/breedloj/language-servers/commit/db917b348e50124ee976998f1ab3e36777868ad0))
+* initial fsWrite chat message ([#1026](https://github.com/breedloj/language-servers/issues/1026)) ([3fc6e85](https://github.com/breedloj/language-servers/commit/3fc6e85e14614a86982b9fb85317c923784a05af))
+* initial support for local project context ([#949](https://github.com/breedloj/language-servers/issues/949)) ([1318d29](https://github.com/breedloj/language-servers/commit/1318d294307d77ffd43e70828afb98788b871295))
+* loop until the model does no longer return tool usages ([4f2eb3c](https://github.com/breedloj/language-servers/commit/4f2eb3c03182a9aea8b7682a959afb820fa9d0dd))
+* port executeBash tool from VSC ([#912](https://github.com/breedloj/language-servers/issues/912)) ([1ccba58](https://github.com/breedloj/language-servers/commit/1ccba58a9e339ab7d5e4370cf40fa7268f802fd8))
+* port fs related tools from VSC.  ([#894](https://github.com/breedloj/language-servers/issues/894)) ([a368acc](https://github.com/breedloj/language-servers/commit/a368accfcd0b5c88b81f407d4cd7b73be2782b9b))
+* port listDirectory from VSC ([#930](https://github.com/breedloj/language-servers/issues/930)) ([7feb127](https://github.com/breedloj/language-servers/commit/7feb127f33570d2349852781e16cc9d6763a92b8))
+* render additional chat messages ([#1025](https://github.com/breedloj/language-servers/issues/1025)) ([3a87baa](https://github.com/breedloj/language-servers/commit/3a87baa96cacba40f3fa920e4a02d26aa01a7058))
+* route button event through chat-client.  ([#1037](https://github.com/breedloj/language-servers/issues/1037)) ([c6bb6c5](https://github.com/breedloj/language-servers/commit/c6bb6c5e81f0c639657e36e1989f6bae3ef47f38))
+* support generateAssistantResponse as well as sendMessage ([a96f864](https://github.com/breedloj/language-servers/commit/a96f86444147757f20cc1fd033b018a12c915622))
+* support view diff for fsWrite ([#1042](https://github.com/breedloj/language-servers/issues/1042)) ([98291cb](https://github.com/breedloj/language-servers/commit/98291cb62a43176ec176bcdd92aa7746d08b9740))
+* update artifact manager for qct .net to include private package support ([#872](https://github.com/breedloj/language-servers/issues/872)) ([9c86cac](https://github.com/breedloj/language-servers/commit/9c86caceb2ebaf803d3e47ad257d49c8ab87bded))
+
+
+### Bug Fixes
+
+* add history to request on each chat prompt ([e9589cd](https://github.com/breedloj/language-servers/commit/e9589cd67fc9a47b4e3a36490f43347d913c71ff))
+* add onTabBarAction and getSerializedChat to Omit list of Chat handlers temporarily ([#961](https://github.com/breedloj/language-servers/issues/961)) ([573588c](https://github.com/breedloj/language-servers/commit/573588c2929b97594660d6b256f1c6353bc8c2bc))
+* add workspace folders as context for agentic-chat ([#995](https://github.com/breedloj/language-servers/issues/995)) ([f300ca5](https://github.com/breedloj/language-servers/commit/f300ca5acae03a993114c31d0b88d88b6cd26dc4))
+* added/deleted lines is incorrect ([#1044](https://github.com/breedloj/language-servers/issues/1044)) ([294bfec](https://github.com/breedloj/language-servers/commit/294bfec899e2b208e960b718a2c2b7ae2e9db9ff))
+* **amazonq:** add cancel support to loading developer profiles ([#940](https://github.com/breedloj/language-servers/issues/940)) ([d07f79a](https://github.com/breedloj/language-servers/commit/d07f79a54d259024d0e8331122d718ee0b461864))
+* **amazonq:** add missing paginator to list profiles call ([#938](https://github.com/breedloj/language-servers/issues/938)) ([0435c80](https://github.com/breedloj/language-servers/commit/0435c80b05fd3c7065da7f831e1e2d9281da0b2e))
+* **amazonq:** add regionalization support to .NET Transform server ([#952](https://github.com/breedloj/language-servers/issues/952)) ([7571ffd](https://github.com/breedloj/language-servers/commit/7571ffdb87662698da0c086dad18a9db4947ce08))
+* **amazonq:** do not throw when receiving null profile while client not connected ([#908](https://github.com/breedloj/language-servers/issues/908)) ([a04eed1](https://github.com/breedloj/language-servers/commit/a04eed1d3527009d848c4d00d0860dc0adf70d80))
+* **amazonq:** fetch profiles only for requested profile region when updating profile ([4793504](https://github.com/breedloj/language-servers/commit/4793504f10713f0685c1766fb0123172104e6f4c))
+* **amazonq:** fix context transparency doesn't show for file & file c… ([#1015](https://github.com/breedloj/language-servers/issues/1015)) ([15c445a](https://github.com/breedloj/language-servers/commit/15c445aa30a6a94f114d1649d68ce3345c0d9ae7))
+* **amazonq:** fixes and refactor ([71f4a44](https://github.com/breedloj/language-servers/commit/71f4a4465ab80264563f83f99fdc3ab0f0241d0b))
+* **amazonq:** increase timeout for project index init ([#1005](https://github.com/breedloj/language-servers/issues/1005)) ([cf88282](https://github.com/breedloj/language-servers/commit/cf8828294d36c9459c199e888b43c37309a7f3f6))
+* **amazonq:** move context command provider to agentic chat controller ([#999](https://github.com/breedloj/language-servers/issues/999)) ([0ad24d4](https://github.com/breedloj/language-servers/commit/0ad24d40e4b8bf50809db6cb4f4ceb00da4deb01))
+* **amazonq:** reduce noisy logging from Q Service Manager ([7ef13b5](https://github.com/breedloj/language-servers/commit/7ef13b585130e264f4fa9a2ba4fae2e923fb940a))
+* **amazonq:** select corrert Service manager mode in completion server factory ([8041934](https://github.com/breedloj/language-servers/commit/8041934de1021cfe570fc2686e4000749fe297a6))
+* **amazonq:** use relative path of document with chat params ([#867](https://github.com/breedloj/language-servers/issues/867)) ([fbc667e](https://github.com/breedloj/language-servers/commit/fbc667e44767ca8ddcb743b9377bf1331a27fb29))
+* **chat-client:** disable click event for empty history list item ([#973](https://github.com/breedloj/language-servers/issues/973)) ([bc20a04](https://github.com/breedloj/language-servers/commit/bc20a04277a7b603e0d0c5e623c87b2a5c4dc4d4))
+* disable timeout for tests in aws-lsp-codewhisperer and core packages ([#955](https://github.com/breedloj/language-servers/issues/955)) ([254e36c](https://github.com/breedloj/language-servers/commit/254e36cf1a34b114a9397c688784293367dc1d63))
+* don't crash if local indexing controller does not start in 60 seconds ([1457cb3](https://github.com/breedloj/language-servers/commit/1457cb3e3be1b2ae9b835f7df977e4c6a9f93f82))
+* fallback to fs if document context fails to sync ([#1017](https://github.com/breedloj/language-servers/issues/1017)) ([69db2bd](https://github.com/breedloj/language-servers/commit/69db2bd8dd631af226c5c96115e4102825019b0c))
+* fix execute bash test command failing on pipeline ([#956](https://github.com/breedloj/language-servers/issues/956)) ([461957d](https://github.com/breedloj/language-servers/commit/461957dc7856ca3490ccdd756e6dd4cb1351698c))
+* for transformation failure with incorrect filePath while extracting ([#875](https://github.com/breedloj/language-servers/issues/875)) ([54310cc](https://github.com/breedloj/language-servers/commit/54310cc15a8cfb3d0eb44559f0d560bdd70581e5))
+* handle indexing library import when require.main is undefined ([#982](https://github.com/breedloj/language-servers/issues/982)) ([f5dac38](https://github.com/breedloj/language-servers/commit/f5dac38c03585ee5001beddbccd8a184bb48c5a7))
+* handle large file uploads using streams ([#874](https://github.com/breedloj/language-servers/issues/874)) ([b5999aa](https://github.com/breedloj/language-servers/commit/b5999aa7c54addd4e6b92483a2bb28c2fe70ffa6))
+* handle undefined workspace folders in context controller ([#964](https://github.com/breedloj/language-servers/issues/964)) ([a01262c](https://github.com/breedloj/language-servers/commit/a01262cf0fc94134b6f00c9d2806c99796233551))
+* hardcoded class and function names logging to avoid uglified naming when bundled ([#909](https://github.com/breedloj/language-servers/issues/909)) ([68e692a](https://github.com/breedloj/language-servers/commit/68e692a754a1262261e734a7ac85468e6470db17))
+* history not persisted for agentic chat via IdC signin ([1d2ca01](https://github.com/breedloj/language-servers/commit/1d2ca018f2248106690438b860d40a7ee67ac728))
+* improve chat rendering if there are additional chat messages ([#1039](https://github.com/breedloj/language-servers/issues/1039)) ([70a086a](https://github.com/breedloj/language-servers/commit/70a086a823fc56dcd068dee0fa3147cb06684b9a))
+* isInWorkspace should work on closed files.  ([#1004](https://github.com/breedloj/language-servers/issues/1004)) ([a96651e](https://github.com/breedloj/language-servers/commit/a96651ea1edd296b5dfa7ee4fdd1c6d378a14858))
+* more robust handling of file paths in context server ([#985](https://github.com/breedloj/language-servers/issues/985)) ([b2033d7](https://github.com/breedloj/language-servers/commit/b2033d756d52d1e8094c97203f1fe0952aa0162f))
+* never leave body undefined in history, even if that assistant response did not have content ([1612eb0](https://github.com/breedloj/language-servers/commit/1612eb0ba1721b9b4a0e4813a5f037b2781ed0b0))
+* parsing AmazonQWorkspaceConfiguration ([#996](https://github.com/breedloj/language-servers/issues/996)) ([5475521](https://github.com/breedloj/language-servers/commit/5475521d77880e82fd394dba0c345c3087787b64))
+* pin typescript version and fix compile errors ([#924](https://github.com/breedloj/language-servers/issues/924)) ([7400fa3](https://github.com/breedloj/language-servers/commit/7400fa3d143fb2c22575485eec7aeb75a63b3612))
+* propagate errors from tools back to the model invocation ([d296091](https://github.com/breedloj/language-servers/commit/d2960913f886452742e5a4be6b18c9511595eaa3))
+* save ([#1035](https://github.com/breedloj/language-servers/issues/1035)) ([d115563](https://github.com/breedloj/language-servers/commit/d115563b96c41ae571fdf0d0525776ce83de9026))
+* temporary fix for error where undefined is being passed to path.join ([#980](https://github.com/breedloj/language-servers/issues/980)) ([49e717c](https://github.com/breedloj/language-servers/commit/49e717cc22b67e954b2362c64a75945c3a6f72bb))
+* up the agent loop limit ([#1022](https://github.com/breedloj/language-servers/issues/1022)) ([0483fcb](https://github.com/breedloj/language-servers/commit/0483fcb6bb7411202d49b840253129892748ae3e))
+* update dynamic import for vector library to avoid webpack resolution interference ([#1030](https://github.com/breedloj/language-servers/issues/1030)) ([6e6c229](https://github.com/breedloj/language-servers/commit/6e6c229eace97964685a33a7ea31119e306047f1))
+* update fsWrite spec specify absolute path only ([#1008](https://github.com/breedloj/language-servers/issues/1008)) ([d1a2b62](https://github.com/breedloj/language-servers/commit/d1a2b628ca54edab376cf202355217bc69cf3abc))
+* update null check for net core compatibility version and path for private package support ([#914](https://github.com/breedloj/language-servers/issues/914)) ([30a0d80](https://github.com/breedloj/language-servers/commit/30a0d80591dbe73fd54ad3783e0d75526d994af8))
+* update spec to require absolute path ([#1009](https://github.com/breedloj/language-servers/issues/1009)) ([1e77b9f](https://github.com/breedloj/language-servers/commit/1e77b9f40946e5f623a609bdc5f76b121408f66a))
+
+
+### Reverts
+
+* enable inline project context in suggestion requests ([#991](https://github.com/breedloj/language-servers/issues/991)) ([9750a9f](https://github.com/breedloj/language-servers/commit/9750a9f5a106f25a2cc416d19a94bf8f74677d84))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @aws/lsp-core bumped from ^0.0.3 to ^0.0.4
+
 ## [0.0.32](https://github.com/aws/language-servers/compare/lsp-codewhisperer/v0.0.31...lsp-codewhisperer/v0.0.32) (2025-04-08)
 
 
